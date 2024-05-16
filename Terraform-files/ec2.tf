@@ -47,7 +47,7 @@ resource "aws_instance" "web" {
   key_name               = "roopak -mumbai"
   vpc_security_group_ids = [aws_security_group.web-sg.id]
   user_data              = templatefile("./install-nginx-wordpress.sh", {})
-  
+
 
   tags = {
     Name = "wprdpress-web"
